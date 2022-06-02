@@ -8,9 +8,9 @@ public class PingServer
 
 	public static void sendPingRequest(String ipAddress) throws UnknownHostException, IOException
 	{
-		InetAddress geek = InetAddress.getByName(ipAddress);
+		InetAddress server = InetAddress.getByName(ipAddress);
 
-		if (geek.isReachable(5000))
+		if (server.isReachable(5000))
 			System.out.println("Host is reachable");
 		else
 			System.out.println("Sorry ! We can't reach to this host");
